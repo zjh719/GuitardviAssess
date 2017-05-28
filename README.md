@@ -12,7 +12,7 @@
 ## sqlite搜索结果
 ![](sqlite搜索结果.png)
 ## sqlite测试
-![](sqlite测试代码.png)
+![](sqlite测试.png)
 ## mysql全部吉他
 ![](mysql全部吉他.png)
 ## mysql搜索
@@ -20,4 +20,4 @@
 ## nysql搜索结果
 ![](mysql搜索结果.png)
 ## mysql测试
-![](mysql测试代码.png)
+![](mysql测试.png)
