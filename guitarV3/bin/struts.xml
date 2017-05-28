@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="200971520"/>
+	<constant name="conststruts.devMode" value="true"/>
+	<!-- Struts2的所有Action都需位于package下 -->
+	<package name="lee" extends="struts-default">
+       <action name="findmm" class="Guitar.action.GuitarAction"  method="find">
+			<result name="success">/WEB-INF/content/guitarlast.jsp</result>
+		</action>
+		<action name="findall" class="Guitar.action.GuitarAction"  method="getAll">
+			<result name="success">/WEB-INF/content/index.jsp</result>
+		</action>
+		<action name="deleGuitar" class="Guitar.action.GuitarAction"  method="deleGuitar">
+			<result name="success" type="chain">findall</result>
+		</action>
+		<action name="addGuitar" class="Guitar.action.GuitarAction"  method="addGuitar">
+			<result name="success" type="chain">findall</result>
+		</action>
+		<action name="*">
+			<result>/WEB-INF/content/{1}.jsp</result>
+		</action>
+	</package>
+</struts>
