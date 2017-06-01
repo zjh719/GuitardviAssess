@@ -114,7 +114,7 @@ public class GuitarAction extends ActionSupport {
 		guitar.setSerialNumber(serialNumber);
 		guitar.setSpec(spec);
 		guitarService.addGuitar(guitar);
-		return backWood;
+		return SUCCESS;
 		
 	}
 	}

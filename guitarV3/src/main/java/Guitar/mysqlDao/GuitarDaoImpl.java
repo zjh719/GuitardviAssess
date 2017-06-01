@@ -74,11 +74,11 @@ public class GuitarDaoImpl implements GuitarDao{
 	@Override
 	public boolean deleGuitar(String serial) {
 		// TODO Auto-generated method stub
-		return DbUtil.executeUpdate("delete from guitar where serialNumber=?", new Object[]{serial});
+		return DbUtil1.executeUpdate("delete from guitar where serialNumber=?", new Object[]{serial});
 	}
 	@Override
 	public Boolean addGuitar(Guitar guitar) {
 		// TODO Auto-generated method stub
-		return DbUtil.executeUpdate("insert into guitar(serialNumber,price,builder,model,type,backWood,topWood) values(?,?,?,?,?,?,?)",  new Object[]{guitar.getSerialNumber(),guitar.getPrice(),guitar.getSpec().getBuilder(),guitar.getSpec().getModel(),guitar.getSpec().getType(),guitar.getSpec().getBackWood(),guitar.getSpec().getTopWood()});
+		return DbUtil1.executeUpdate("insert into guitar(serialNumber,price,builder,model,type,backWood,topWood) values(?,?,?,?,?,?,?)",  new Object[]{guitar.getSerialNumber(),guitar.getPrice(),guitar.getSpec().getBuilder(),guitar.getSpec().getModel(),guitar.getSpec().getType(),guitar.getSpec().getBackWood(),guitar.getSpec().getTopWood()});
 	}
 }
